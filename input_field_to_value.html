@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login form</h1>
+    <label for="name">Enter first name</label>
+    <input type="text" id="name" placeholder="Enter your name here....."><br>
+    <label for="email">Enter your Email</label>
+    <input type="email" id="email" placeholder="Enter your email here..."><br>
+    <select name="place" id="place">
+        <option value="">Select your place</option>
+        <option value="Dhaka">Dhaka</option>
+        <option value="chitt">chittagong</option>
+        <option value="chitt">Khulna</option>
+        <option value="chitt">comilla</option>
+        <option value="chitt">Gazipur</option>
+    </select><br>
+    <button onclick="get()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function get(){
+             let a=document.getElementById("name").value 
+             let b=document.getElementById("email").value
+             let c=document.getElementById("place").value
+             let information = [a,b,c]
+             //if(a==="" || b ==="" || c === "") alert("All feild are required!")
+            //else     document.getElementById("output").innerHTML=information
+            localStorage.setItem("information",information)
+            window.location.href="newpage.html"
+         
+        }
+       
+
+    </script>
+</body>
+</html>

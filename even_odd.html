@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter a number</label>
+    <input type="text" id="num" placeholder="Enter a number here..."> <br>
+    <button onclick="get()">check</button> <br>
+    <p id="output"></p>
+    <p id="msg"></p>
+    <script> 
+        let inform = localStorage.getItem("information")
+        document.getElementById("msg").innerHTML="Welcome" + inform
+        function get()
+        {
+            let a = parseFloat(document.getElementById("num").value)
+            if(a%2===0) document.getElementById("output").innerHTML="Even"
+            else if(isNaN(a)) document.getElementById("output").innerHTML="Enter valid number"
+            else document.getElementById("output").innerHTML="Odd"
+        }
+       
+    </script>
+</body>
+</html>

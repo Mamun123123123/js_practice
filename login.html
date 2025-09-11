@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>login form</h1>
+    <label for="name">Enter your user name</label>
+    <input type="text" id="name" placeholder="Enter your user name..."><br>
+    <label for="pass">Enter your password</label>
+    <input type="text" id="pass" placeholder="Enter your password"><br>
+    <button onclick="get()">submit</button>
+    <script>
+        function get()
+        {
+            let a = document.getElementById("name").value
+            let b = document.getElementById("pass").value
+            if(a==="" || b === "" ) alert("All feild are required")
+            else if(b.length<6) alert("password must be 6 character or more")
+            else alert("login successful")
+        }
+    </script>
+</body>
+</html>
