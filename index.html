@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding and removing Elements </title>
+</head>
+<body>
+    <h1>Adding and removing Elements Dynamically</h1>
+    <ul id="list">
+        <li>item 1</li>
+         <li>item 2</li>
+    </ul>
+    <button id="add">Add Item</button>
+    <button id="remove">Remove Item</button>
+    <script>
+       const list = document.getElementById('list')
+       const add = document.getElementById('add')
+       const remove = document.getElementById('remove')
+       add.addEventListener('click',() => {
+           const newItem = document.createElement("li")
+           newItem.textContent=`Item ${list.children.length + 1}`
+           list.appendChild(newItem)
+       })
+       remove.addEventListener("click",()=>{
+          list.removeChild(list.lastChild)
+       })
+    
+    </script>
+</body>
+</html>
